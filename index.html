@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev - Kayıt Formu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Kayıt Formu</h1>
+    <p id="description">Lütfen aşağıdaki bilgileri doldurun.</p>
+
+    <form id="survey-form">
+        <!-- İsim Giriş Alanı -->
+        <label id="name-label" for="name">Adınızı Girin:</label>
+        <input type="text" id="name" name="name" placeholder="Adınızı yazın" required>
+
+        <!-- E-posta Giriş Alanı -->
+        <label id="email-label" for="email">E-posta Adresinizi Girin:</label>
+        <input type="email" id="email" name="email" placeholder="E-posta adresinizi yazın" required>
+
+        <!-- Sayı Giriş Alanı -->
+        <label id="number-label" for="number">Yaşınızı Girin:</label>
+        <input type="number" id="number" name="number" placeholder="Yaşınızı yazın" min="18" max="100" required>
+
+        <!-- Seçim Kutusu -->
+        <label for="dropdown">Cinsiyetinizi Seçin:</label>
+        <select id="dropdown" name="gender" required>
+            <option value="female">Kadın</option>
+            <option value="male">Erkek</option>
+        </select>
+
+        <!-- Radyo Düğmeleri -->
+        <fieldset>
+            <legend>Hangi tür aktivitelerle ilgileniyorsunuz?</legend>
+            <label for="activity1">
+                <input type="radio" id="activity1" name="activity" value="sports" required> Spor
+            </label>
+            <label for="activity2">
+                <input type="radio" id="activity2" name="activity" value="music" required> Müzik
+            </label>
+        </fieldset>
+
+        <!-- Onay Kutuları -->
+        <fieldset>
+            <legend>İletişim tercihlerinizi seçin:</legend>
+            <label for="email-contact">
+                <input type="checkbox" id="email-contact" name="contact" value="email"> E-posta ile iletişim
+            </label>
+            <label for="sms-contact">
+                <input type="checkbox" id="sms-contact" name="contact" value="sms"> SMS ile iletişim
+            </label>
+        </fieldset>
+
+        <!-- Metin Alanı -->
+        <label for="comments">Yorumlarınızı Girin:</label>
+        <textarea id="comments" name="comments" placeholder,="Yorumlarınızı buraya yazın" rows="4" required></textarea>
+
+        <!-- Gönder Butonu -->
+        <input type="submit" id="submit" value="Gönder">
+    </form>
+</body>
+</html>
